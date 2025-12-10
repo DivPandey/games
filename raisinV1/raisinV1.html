@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<link rel="stylesheet" href="raisinV1.css">
+  <title>Tongue Guided Exercise</title>
+</head>
+<body>
+
+<div class="app">
+  <h1>Tongue Guided Exercise</h1>
+  <h4>(THIS IS FOR DEMONSTRATION , DO WITH CLOSED MOUTH)</h2>
+
+  <div class="tongue-container">
+    <div class="label-right">RIGHT</div>
+    <div class="label-left">LEFT</div>
+
+    <img src="raisinV1.jpeg" alt="Tongue">
+
+    <div class="circle center" id="circle"></div>
+
+    <div class="fragment" id="f1"></div>
+    <div class="fragment" id="f2"></div>
+    <div class="fragment" id="f3"></div>
+  </div>
+
+  <div class="instruction" id="instruction">Press Start to begin</div>
+  <div class="timer" id="timer">5</div>
+  <div class="round" id="round">Round 0/10</div>
+
+  <div class="controls">
+    <button class="start" onclick="startAnimation()">Start</button>
+    <button class="pause" onclick="pauseAnimation()">Pause</button>
+    <button class="reset" onclick="resetAnimation()">Reset</button>
+  </div>
+</div>
+<script src="raisinV1.js"></script>
+
+</body>
+</html>
