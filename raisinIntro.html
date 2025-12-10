@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Raisin Meditation Game</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #000428, #01223f);
+      font-family: Arial, sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .intro-card {
+      width: 90%;
+      max-width: 420px;
+      background: rgba(0,0,0,0.65);
+      border-radius: 16px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(0,0,0,0.8);
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: #00e5ff;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+
+    .instruction-box {
+      background: rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 20px;
+      text-align: left;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .instruction-box ul {
+      padding-left: 18px;
+    }
+
+    .food {
+      margin: 15px 0;
+      font-weight: bold;
+      color: #ffcc80;
+    }
+
+    .animated-ball {
+      width: 18px;
+      height: 18px;
+      background: yellow;
+      border-radius: 50%;
+      margin: 15px auto;
+      animation: moveBall 2s infinite alternate ease-in-out;
+    }
+
+    @keyframes moveBall {
+      0% { transform: translateX(-60px); }
+      100% { transform: translateX(60px); }
+    }
+
+    .note {
+      font-size: 12px;
+      opacity: 0.85;
+      margin-top: 10px;
+    }
+
+    .start-btn {
+      margin-top: 20px;
+      padding: 14px 28px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      background: #00c853;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .start-btn:hover {
+      background: #00e676;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="intro-card">
+    
+    <h1>Let’s Play the Game</h1>
+    <div class="subtitle">
+      A mindful tongue & sensory awareness exercise  
+    </div>
+
+    <div class="instruction-box">
+      <b>How to Play:</b>
+      <ul>
+        <li>Keep a <b>raisin, toffee, chocolate, or any small food item</b> ready.</li>
+        <li>Place it gently on your tongue when the game starts.</li>
+        <li>A <b>yellow ball</b> will guide you where to move the food on your tongue.</li>
+        <li>You must follow:
+          <b>Left → Right → Center → Upper → Lower</b>
+          using the ball and text instructions.
+        </li>
+        <li>After every round, you will <b>chew slowly</b> and then <b>swallow mindfully</b>.</li>
+      </ul>
+    </div>
+
+    <div class="food">
+      Keep ready: Raisin | Toffee | Chocolate | Any small food
+    </div>
+
+    <div class="animated-ball"></div>
+
+    <div class="note">
+      Inspired by mindfulness-based eating & sensory awareness practices.
+    </div>
+
+    <button class="start-btn" onclick="goToExercise()">
+      Start the Exercise
+    </button>
+  </div>
+
+  <script>
+    function goToExercise() {
+      window.location.href = "raisinV1/raisinV1.html";
+    }
+  </script>
+
+</body>
+</html>
