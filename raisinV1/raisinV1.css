@@ -1,40 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-<link rel="stylesheet" href="raisinV1.css">
-  <title>Tongue Guided Exercise</title>
-</head>
-<body>
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: 
+    radial-gradient(circle at top, rgba(90,120,255,0.25), transparent 60%),
+    linear-gradient(135deg,
+      rgba(5,10,35,1),
+      rgba(2,4,18,1),
+      rgba(0,0,0,1)
+    );
+  color: white;
+  overflow: hidden;
+ }
 
-<div class="app">
-  <h1>Tongue Guided Exercise</h1>
-  <h4>(THIS IS FOR DEMONSTRATION , DO WITH CLOSED MOUTH)</h2>
 
-  <div class="tongue-container">
-    <div class="label-right">RIGHT</div>
-    <div class="label-left">LEFT</div>
+    .app { text-align: center; }
 
-    <img src="raisinV1.jpeg" alt="Tongue">
+    .tongue-container {
+      position: relative;
+      width: 300px;
+      margin: 20px auto;
+    }
 
-    <div class="circle center" id="circle"></div>
+    .tongue-container img {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+    }
 
-    <div class="fragment" id="f1"></div>
-    <div class="fragment" id="f2"></div>
-    <div class="fragment" id="f3"></div>
-  </div>
+    .label-left, .label-right {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-weight: bold;
+      font-size: 14px;
+      color: #00e5ff;
+    }
 
-  <div class="instruction" id="instruction">Press Start to begin</div>
-  <div class="timer" id="timer">5</div>
-  <div class="round" id="round">Round 0/10</div>
+    .label-left { right: -55px; }
+    .label-right { left: -60px; }
 
-  <div class="controls">
-    <button class="start" onclick="startAnimation()">Start</button>
-    <button class="pause" onclick="pauseAnimation()">Pause</button>
-    <button class="reset" onclick="resetAnimation()">Reset</button>
-  </div>
-</div>
-<script src="raisinV1.js"></script>
+    .circle, .fragment {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: yellow;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      transition: all 1s ease-in-out;
+      box-shadow: 0 0 12px rgba(0,0,0,0.6);
+    }
 
-</body>
-</html>
+    .fragment {
+      width: 14px;
+      height: 14px;
+      opacity: 0;
+    }
+
+    .center { left: 50%; top: 62%; }
+    .upper-left { left: 65%; top: 42%; }
+    .lower-right { left: 38%; top: 82%; }
+    .upper-right { left: 35%; top: 42%; }
+    .lower-left { left: 62%; top: 82%; }
+    
+
+    .controls { margin-top: 15px; }
+
+    button {
+      padding: 10px 18px;
+      margin: 5px;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .start { background: #00c853; }
+    .pause { background: #ffab00; }
+    .reset { background: #d50000; color: white; }
+
+    .instruction {
+      margin-top: 12px;
+      font-size: 30px;
+      min-height: 24px;
+    }
+
+    .timer {
+      margin-top: 6px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #00e5ff;
+    }
+
+    .round {
+      margin-top: 5px;
+      font-size: 14px;
+      color: #ffcc80;
+    }
