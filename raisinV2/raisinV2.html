@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Raisin Mindfulness Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="raisinV2.css">
+</head>
+
+<body>
+  <h1 class="main-title">Raisin Mindfulness Game</h1>
+
+<div class="game-container">
+  <div class="round" id="roundDisplay">Round: 1 / 10</div>
+  <div id="timer" style="font-size:22px; margin:8px 0;">⏳ 30s</div>
+
+  <div class="visual">
+    <img id="stepImage" src="images/hold.jpg" class="step-img">
+  </div>
+
+  <div class="instruction" id="instruction">
+    Click On Start.
+  </div>
+
+  <div class="buttons">
+    <button onclick="startGame()">Start</button>
+   <button id="pauseBtn" onclick="pauseGame()">Pause</button>
+
+<button onclick="resetGame()">Reset</button>
+  </div>
+</div>
+
+<script src="raisinV2.js"></script>
+
+</body>
+</html>
